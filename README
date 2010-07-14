@@ -1,0 +1,45 @@
+jQuery fullslide
+
+Fullslide is a jquery plugin for fullscreen slide shows.
+
+It uses a double buffering technique instead of just throwing all the
+images at once at the browser. This helps with the page load speed.
+It provides callbacks for the slide transitions and let's you easily
+create a blank overlay to protect the images from right-click downloads.
+
+  <script type="text/javascript">
+    var slides = [
+    {
+      title: 'Lonely in Berlin',
+      category: 'Street',
+      src: 'slides/bridge.jpg'
+    },
+    {
+      title: 'Little Miss Swimsuit',
+      category: 'Street',
+      src: 'slides/pinkatbeach.jpg'
+    }
+    ];
+
+    jQuery.fullslide({
+      slides: slides,
+      fade_duration: 750,
+      show_duration: 6000,
+      blank_overlay: true,
+      on_slide_callback: function(from, to) {
+      }
+      on_select_callback: function(from, to) {
+      }
+    });
+
+    jQuery.fullslide.pause();
+    jQuery.fullslide.unpause();
+    jQuery.fullslide.show(0);
+
+
+jQuery flashdetect
+
+Want to know what version of flash is installed? Or if flash is installed at all? Use...
+
+ if(jQuery.hasFlash()) { ... }
+ jQuery.hasFlash.playerVersion()
