@@ -1,3 +1,23 @@
+jQuery customsearch
+
+Let's you use Google's custom search on you website. Using AJAX
+it searches as you type using the latest (non-deprecated) API.
+Gives complete control of the search result and form layout.
+
+    $(document).ready(function(){
+
+      jQuery.customsearch({
+        google_key: 'YOUR-KEY',
+        google_cx: 'YOUR-CX',
+        query: "#query",
+        message: "#message",
+        results: "#results",
+        more: "#more",
+      });
+
+Check the options for more ways to customize.
+
+
 jQuery fullslide
 
 Fullslide is a jquery plugin for fullscreen slide shows.
